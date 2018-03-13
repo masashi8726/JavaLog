@@ -2,12 +2,8 @@ package jp.techacademy.masashi.muto.javalog;
 
 import android.util.Log;
 
-class Dog extends Animal {
+class Dog extends Animal implements Movable {
     static String to_jp = "犬";
-
-    String name;
-    int age;
-
 
     public Dog(String name, int age) {
         this.name = name;
@@ -20,5 +16,10 @@ class Dog extends Animal {
 
     public void say() {
         Log.d("javatest", this.name + "(" + this.age + "歳)" + "「ワンワン」");
+    }
+
+    @Override
+    public void move() {
+        Log.d("javatest", this.name + "(" + this.age +"歳)" + "は全力で走った。");
     }
 }
