@@ -2,18 +2,23 @@ package jp.techacademy.masashi.muto.javalog;
 
 import android.util.Log;
 
-public class Dog {
+class Dog extends Animal {
+    static String to_jp = "犬";
+
     String name;
     int age;
 
 
-    public Dog() {
-        name = "";
-        age = 0;
+    public Dog(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
+    public static void introduce(){
+        Log.d("javatest", "これは犬クラスです。");
+    }
 
-    public void say(){
-        Log.d("javatest", this.name + "(" + this.age "歳)" + "「ワンワン」");
+    public void say() {
+        Log.d("javatest", this.name + "(" + this.age + "歳)" + "「ワンワン」");
     }
 }
